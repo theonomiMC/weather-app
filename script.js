@@ -5,7 +5,7 @@ let cityName = cityInput.value;
 // ADD EVENTLISTNERER TO TEXT INPUT
 cityInput.addEventListener('input', e => {
   cityName = e.target.value;
-  console.log(cityName)
+  // console.log(cityName)
 })
 
 //SELECT FORM
@@ -14,10 +14,17 @@ const form = document.querySelector('form')
 form.addEventListener('submit', e => {
 
   e.preventDefault();
-  document.getElementById("aftersubmit").style.display = "flex";
-
   fetch(`http://localhost:3001/api/weather?q=${cityName}`)
-    .then(response => response.json())
+    .then(response => {
+      if(response.ok){
+        console.log(response.ok)
+        document.getElementById("aftersubmit").style.display = "flex";
+        return response.json()
+      }
+       console.log('no connection')  
+    }
+      
+      )
     .then(result => {
       let city = document.querySelector('.cityName');
       let desc = document.querySelector('.description');
@@ -26,16 +33,11 @@ form.addEventListener('submit', e => {
       let visib = document.querySelector('.visibility');
       let hum = document.querySelector('.humidity');
       let weatherIcon = document.querySelector('.weather-icon');
-      let errorMessage = document.getElementById('error-message');
       let reelFeel = document.querySelector('.feels-like');
-
       let sunrise = document.querySelector('.sunrise');
       let sunset = document.querySelector('.sunset');
       let pressure = document.querySelector('.pressure');
 
-
-      if (result.name) {
-        console.log(response)
         city.innerHTML = result.name
         desc.innerHTML = result.description;
         temperature.innerHTML = result.temp;
@@ -47,14 +49,10 @@ form.addEventListener('submit', e => {
         sunrise.innerHTML = "Sunrise: " + result.sunrise;
         sunset.innerHTML = "Sunset: " + result.sunset;
         pressure.innerHTML = "Pressure: " + result.pressure;
-
-      } else {
-       
-        console.log(errorMessage.innerHTML = "City not found")
-      }
-
+    
     }).catch(error => {
       console.log(error);
+      document.querySelector(".error-message").innerText = "Connection faild, please try later .. ";
     })
 
   cityInput.value = '';
