@@ -1,0 +1,15 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "front-end",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+    
+  },
+  "author": "Natalia THeg",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.26.13"
+  }
+}

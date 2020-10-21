@@ -1,0 +1,292 @@
+*,
+*:before,
+*:after{
+  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+}
+a,  body, div, h1, h2, h3, h4, h5, h6, header, html, img, input,  p, span {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body, html {
+  height: 100%;
+}
+body{
+  width:100%;
+  font-family: georgia;
+  background: var(--clr-grey-10);
+  background-color: #ecf0f1;
+  color: var(--clr-grey-1);
+  line-height: 1.5;
+  }
+h4, h2{
+  letter-spacing: 3px;
+  text-transform: capitalize;
+  line-height: 1.25;
+  font-weight: bold;
+}
+h2 {
+  display: block;
+  font-size: 1.7em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+  /* header section */
+  .header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/p1.jpg");
+    height: 40%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .header-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+ 
+  input[type=search]{  
+    font-family: FontAwesome;
+    width: 100%; 
+    padding: 25px 40px;  
+    margin: 8px 0;  
+    display: inline-block;  
+    border: 1px solid #ccc;  
+    box-sizing: border-box;  
+  } 
+  ::placeholder{
+    letter-spacing: 3px;
+    font-style: italic;
+  } 
+  .background {
+    background-color: rgb(255, 255, 255);
+    font-size: 18px;
+    width: 700px;
+    display:none;
+    flex-wrap: wrap;
+    text-align:center;
+    justify-content: center;
+    align-items: center;
+    margin: 150px auto;
+    padding:40px 50px;
+  }
+  
+  .content-text {
+    font-family: georgia, sans-serif;
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(58, 56, 56);
+  }
+  .error-message {
+    color: rgb(150, 8, 3);
+    text-align: center;
+  }
+  .weather-info {
+    padding:10px auto;
+    height:350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .form-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+footer{
+  margin: 35px 0 15px 0; 
+  text-align: center;
+  font-style:italic;
+  color:#636e72;
+  padding-top: 0.75em;
+  padding-bottom: 0.75em;
+  }
+  
+
+  /* Accuweather style */
+  
+.two-column-page-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  max-width: 960px;
+  margin: 0 24px 24px;
+}
+
+.content-module {
+  margin-bottom: 16px;
+  width:660px;
+  padding:10px 20px;
+}
+@media (max-width: 767px){
+.two-column-page-content {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 0 12px;
+}
+}
+.two-column-page-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+   flex-direction: row;
+   max-width: 960px;
+   margin: 0 24px 24px;
+}
+
+.weatherCard .weatherCard-header {
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 15px 12px 14px;
+  border-radius: 2px;
+}
+.weatherCard .weatherCard-header .title {
+  width: 40px;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.43;
+  color: #1f1f1f;
+  margin-right: 12px;
+  text-transform: uppercase;
+  -ms-flex-item-align: baseline;
+  align-self: baseline;
+}
+
+
+.weatherCard .weatherCard-header .icon {
+  width: 62px;
+  height: 62px;
+  margin-right: 16px;
+}
+.weather-icon {
+  height: 128px;
+  width: 128px;
+}
+.weatherCard .weatherCard-header .temperature {
+  font-size: 1.5em;
+  font-weight: 500;
+  line-height: 1.08;
+  color: #000;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 50px;
+  width: 52px;
+}
+.weatherCard .weatherCard-header>div {
+  -ms-flex-preferred-size: 25%;
+  flex-basis: 25%;
+}
+.weatherCard .weatherCard-header .temperature .hi-lo-label {
+  color: #878787;
+  font-size: 20px;
+  line-height: 1.71;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+}
+.weatherCard .weatherCard-header .real-feel {
+  
+  font-weight: 500;
+  line-height: 1.11;
+  width: 76px;
+  white-space: nowrap;
+}
+.weatherCard .weatherCard-header>div {
+  -ms-flex-preferred-size: 25%;
+  flex-basis: 25%;
+}
+.weatherCard .weatherCard-header .short-date {
+  -ms-flex-item-align: first baseline;
+  align-self: first baseline;
+  text-align: right;
+  opacity: .6;
+  font-size: 14px;
+}
+.weatherCard .weatherCard-header>div {
+  -ms-flex-preferred-size: 25%;
+  flex-basis: 25%;
+}
+.weatherCard .weatherCard-content {
+  border-bottom-right-radius: 2px;
+  border-bottom-left-radius: 2px;
+  background: #fff;
+  color: #1f1f1f;
+  font-size: 16px;
+  line-height: 1.25;
+  padding: 0 12px 26px;
+}
+.weatherCard .weatherCard-content .phrase {
+ 
+  padding: 11px 0 10px;
+}
+.weatherCard .weatherCard-content .panels {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.weatherCard .weatherCard-content .panels .left {
+  margin-right: 24px;
+  -webkit-box-flex: 50%;
+  -ms-flex: 50%;
+  flex: 50%;
+}
+.weatherCard .weatherCard-content .panel-item {
+  padding: 11px 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border-bottom: 1px solid rgba(0,0,0,.15);
+}
+.weatherCard .weatherCard-content .panel-item .value {
+ 
+  font-weight: 500;
+  line-height: 1.33;
+  margin-left: auto;
+  padding-left: 8px;
+  text-align: right;
+}
+.weatherCard .weatherCard-content .panel-item:last-child {
+  border: 0;
+  padding-bottom: 0;
+}
+.weatherCard .weatherCard-content .panels .right {
+  -webkit-box-flex: 50%;
+  -ms-flex: 50%;
+  flex: 50%;
+}

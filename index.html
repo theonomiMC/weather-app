@@ -1,0 +1,97 @@
+<!DOCTYPE html lang="en" class="full-height">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- local css file -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- font awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Weather App</title>
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-text">
+            <h1 style="font-size:50px">Weather Forecast</h1>
+            <form>
+                <input id="query" class="form-control" type="search" placeholder="&#xf002 Search City …" required>
+            </form>
+        </div>
+    </div>
+
+    <div class="background" id='aftersubmit' >
+        <div class="weatherCard content-module ">
+            <div class="weatherCard-header">
+                <h2 class="title cityName"></h2>
+                <div class="weather-icon">
+                    <img class="weather-icon icon" src="icons/unknown.png" alt="weather-icon" />
+                </div>
+
+                <h1 class="error-message"></h1>
+
+                <!-- TEMPERATURE div -->
+                <div class="temperature">
+                    <h4 class="temperature"></h4><span class="hi-lo-label">Lo</span>   
+                                
+                </div>
+
+                <!-- RealFeel -->
+                <div class="real-feel">
+                    <div>
+                        RealFeel®
+                        <h4 class="feels-like"></h4>
+                    </div>
+                </div>
+                <!-- short date -->
+                <div class="short-date">
+                    <div>
+                        <p id="short-date"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="weatherCard-content">
+                <!-- description div -->
+                <div class="phrase">
+                    <h4 class="description"></h4>
+                </div>
+
+                <div class="panels">
+                    <div class="left">
+                        <!-- wind -->
+                        <p class="panel-item wind value"><</p>
+                        <!-- visibility -->
+                        <p class="panel-item visibility value"><</p>
+                        <!-- humidity -->
+                        <p class="panel-item humidity value"></p>
+                    </div>
+
+                    <div class="right">
+                        <!-- pressure, sunrize, sunset div -->
+                        <p class="panel-item pressure value"></p>
+                        <p class="panel-item sunrise value"></p>
+                        <p class="panel-item sunset value"></p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+    <!-- footer div -->
+    <footer id="mobile-footer">
+        <p id="footer"></p>
+    </footer>
+
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/3.5.0/fetch.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
