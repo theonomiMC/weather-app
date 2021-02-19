@@ -7,7 +7,6 @@
 }
 
 body, html {
-  height: 100vw;
   width:100%;
 }
 body{
@@ -36,7 +35,7 @@ h2 {
   /* header section */
   .header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/p1.jpg");
-    height: 40%;
+    height: 25em;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -47,6 +46,7 @@ h2 {
   }
   .header-text {
     text-align: center;
+    width: 50%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -58,7 +58,7 @@ h2 {
  }
   input[type=search]{  
     font-family: FontAwesome;
-    width: 100%; 
+    /* width: 100%;  */
     padding: 25px 40px;  
     margin: 8px 0;  
     display: inline-block;  
@@ -293,11 +293,14 @@ footer{
   -ms-flex: 50%;
   flex: 50%;
 }
-@media screen and (max-width: 400px){
+@media screen and (max-width: 448px){
   .weatherCard .weatherCard-header{
     flex-direction: column;
   }
   .header-text h1{
     font-size: 2rem;
+  }
+  .header-text{
+    width:70%;
   }
 }
