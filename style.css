@@ -5,17 +5,9 @@
   margin: 0;
   padding: 0;
 }
-a,  body, div, h1, h2, h3, h4, h5, h6, header, html, img, input,  p, span {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font: inherit;
-  vertical-align: baseline;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
+
 body, html {
-  height: 100%;
+  height: 100vw;
 }
 body{
   width:100%;
@@ -49,7 +41,9 @@ h2 {
     background-size: cover;
     position: relative;
   }
-  
+  .header::after{
+    display: none;
+  }
   .header-text {
     text-align: center;
     position: absolute;
@@ -58,7 +52,9 @@ h2 {
     transform: translate(-50%, -50%);
     color: white;
   }
- 
+ .header-text h1 {
+   font-size:2.5rem
+ }
   input[type=search]{  
     font-family: FontAwesome;
     width: 100%; 
@@ -75,7 +71,7 @@ h2 {
   .background {
     background-color: rgb(255, 255, 255);
     font-size: 18px;
-    width: 700px;
+    max-width: 700px;
     display:none;
     flex-wrap: wrap;
     text-align:center;
@@ -295,4 +291,9 @@ footer{
   -webkit-box-flex: 50%;
   -ms-flex: 50%;
   flex: 50%;
+}
+@media screen and (max-width: 400px){
+  .weatherCard .weatherCard-header{
+    flex-direction: column;
+  }
 }
