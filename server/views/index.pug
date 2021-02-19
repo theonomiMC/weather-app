@@ -5,29 +5,29 @@ block layout-content
    div.Headertext
       h1 Weather Forecast
       form#formInput
-      input.form-control#query(
+        input.form-control#query(
         type="search" 
         placeholder="Search City …" 
         required
-      )
-      button#btn Submit
+        )
+        //- button.btn#btn(type='submit') Search
      
       
   div.Background 
-    div.Contenttext
-      div.Weatherinfo
-      div.Error-message#msg
-        h4.CityNames#city
-        p#demo
-        h4.Description#desc
-        h4.Temperatur#temp
-        h4.Wind#wind
-        div.Weather-icon#weather-icon
-          img(
-            src="icons/unknown.png"
-            alt="weather-icon"
-          )
+    div.Weatherinfo
+      h4.CityNames#city
+      p#demo
+      h4.Description#desc
+      h4.Temperatur#temp
+      h4.Wind#wind
+      div.Weather-icon#weather-icon
+        img(
+          src="icons/unknown.png"
+          alt="weather-icon"
+        )
 
   block footer        
   footer
-      p © #{new Date().getFullYear()} Current WeatherApp
+      p © #{new Date().getFullYear()} Current Weather by 
+        a(href='https://github.com/theonomiMC') Natalia Theg 
+        
